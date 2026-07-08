@@ -304,6 +304,27 @@ blockquote {
 .resource-box p { color: var(--text-muted); font-size: 0.9rem; }
 .resource-link { white-space: nowrap; }
 
+/* ===== SLIDE GALLERY ===== */
+.slide-gallery {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.slide-gallery img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.slide-gallery img:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
 /* ===== FUNCTION LIST ===== */
 .function-list li {
     padding: 14px 0;
@@ -412,6 +433,13 @@ blockquote {
 
 .reflection-card h3 { font-size: 1.05rem; margin-bottom: 14px; }
 
+.worksheet-img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
 /* ===== FOOTER ===== */
 .footer {
     text-align: center;
@@ -432,6 +460,7 @@ blockquote {
     .card-grid.two-col { grid-template-columns: repeat(2, 1fr); }
     .grid-divided.three-col { grid-template-columns: 1fr; }
     .grid-divided.three-col .cell { border-right: none; }
+    .slide-gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
@@ -441,4 +470,5 @@ blockquote {
     .card-grid.two-col { grid-template-columns: 1fr; }
     .panel { padding: 28px; }
     .resource-box { flex-direction: column; align-items: flex-start; }
+    .slide-gallery { grid-template-columns: 1fr; }
 }
